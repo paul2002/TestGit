@@ -1,0 +1,130 @@
+
+DELL@DESKTOP-QPR6TH0 MINGW64 ~
+$ cd
+
+DELL@DESKTOP-QPR6TH0 MINGW64 ~
+$ cd c/
+bash: cd: c/: No such file or directory
+
+DELL@DESKTOP-QPR6TH0 MINGW64 ~
+$ cd /c
+
+DELL@DESKTOP-QPR6TH0 MINGW64 /c
+$ ls
+'$Recycle.Bin'/             git/             'Program Files (x86)'/
+'$WINDOWS.~BT'/             hiberfil.sys      ProgramData/
+ Apps/                      Intel/            Recovery/
+ Dell/                      MSOCache/         swapfile.sys
+ dell.sdr                   pagefile.sys     'System Volume Information'/
+'Documents and Settings'@   PerfLogs/         Users/
+ Drivers/                  'Program Files'/   Windows/
+
+DELL@DESKTOP-QPR6TH0 MINGW64 /c
+$ cd git/
+
+DELL@DESKTOP-QPR6TH0 MINGW64 /c/git
+$ ls
+TestGit/
+
+DELL@DESKTOP-QPR6TH0 MINGW64 /c/git
+$ git config --global user.name "paulkanda2002"
+
+DELL@DESKTOP-QPR6TH0 MINGW64 /c/git
+$ git config --global user.email paulkanda2002@yahoo.com
+
+DELL@DESKTOP-QPR6TH0 MINGW64 /c/git
+$ git clone https://github.com/paul2002/TestGit.git
+fatal: destination path 'TestGit' already exists and is not an empty directory.
+
+DELL@DESKTOP-QPR6TH0 MINGW64 /c/git
+$ ls
+TestGit/
+
+DELL@DESKTOP-QPR6TH0 MINGW64 /c/git
+$ cd TestGit/
+
+DELL@DESKTOP-QPR6TH0 MINGW64 /c/git/TestGit (master)
+$ ls
+README.md  test.txt
+
+DELL@DESKTOP-QPR6TH0 MINGW64 /c/git/TestGit (master)
+$ git add test.txt
+
+DELL@DESKTOP-QPR6TH0 MINGW64 /c/git/TestGit (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   test.txt
+        new file:   text.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    text.txt
+
+
+DELL@DESKTOP-QPR6TH0 MINGW64 /c/git/TestGit (master)
+$ git commit -m "first commit" test.txt
+[master db60948] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+
+DELL@DESKTOP-QPR6TH0 MINGW64 /c/git/TestGit (master)
+$ git push -u origin master
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com': paulkanda2002
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/paul2002/TestGit.git/'
+
+DELL@DESKTOP-QPR6TH0 MINGW64 /c/git/TestGit (master)
+$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 306 bytes | 306.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/paul2002/TestGit.git
+   f09f8f2..db60948  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+DELL@DESKTOP-QPR6TH0 MINGW64 /c/git/TestGit (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   text.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   test.txt
+        deleted:    text.txt
+
+
+DELL@DESKTOP-QPR6TH0 MINGW64 /c/git/TestGit (master)
+$ git commit -m "second commit" test.txt
+[master a21fb00] second commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+DELL@DESKTOP-QPR6TH0 MINGW64 /c/git/TestGit (master)
+$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 329 bytes | 329.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/paul2002/TestGit.git
+   db60948..a21fb00  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+DELL@DESKTOP-QPR6TH0 MINGW64 /c/git/TestGit (master)
+$
